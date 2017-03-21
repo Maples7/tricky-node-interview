@@ -15,7 +15,7 @@ A：6 种基本类型：Boolean、Null、Undefined、Number、String、Symbol（
 1. `typeof Null === 'object'`；
 2. `typeof [function] === 'function'`，但实际上 JS 没有 Function 这种类型；
 
-这题一般都是引出后续的其他题。
+这题一般都是引出后续其他与 JavaScript 类型系统相关的题。
 
 ---
 
