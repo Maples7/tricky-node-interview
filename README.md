@@ -21,7 +21,7 @@ A：6 种基本类型：Boolean、Null、Undefined、Number、String、Symbol（
 
 ### Q：`10 > undefined` 是 `true` 还是 `false`？         
 A：`false`。
-这一题则是明显的不等比较时的类型转换规则，如下：
+这一题是明显的不等比较时的类型转换规则，如下：
 
 1. 如果两个操作值都是数值，则进行数值比较
 2. 如果两个操作值都是字符串，则比较字符串对应的字符编码值
