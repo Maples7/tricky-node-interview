@@ -9,7 +9,7 @@
 
 ## JavaScript 语言
 
-**Q：JavaScript 中基本类型（原始类型）有哪些？**                
+### Q：JavaScript 中基本类型（原始类型）有哪些？**                
 A：6 种基本类型：Boolean、Null、Undefined、Number、String、Symbol（ES6）。其他全部都是 Object（引用类型）。值得一提的是 `typeof` 的一些特殊情形：
 
 1. `typeof Null === 'object'`；
@@ -17,7 +17,9 @@ A：6 种基本类型：Boolean、Null、Undefined、Number、String、Symbol（
 
 这题一般都是引出后续的其他题。
 
-**Q：`10 > undefined` 是 `true` 还是 `false`？**          
+---
+
+### Q：`10 > undefined` 是 `true` 还是 `false`？**          
 A：`false`。
 这一题则是明显的不等比较时的类型转换规则，如下：
 
@@ -30,7 +32,9 @@ A：`false`。
 
 首先应用规则 3，`Number(undefined)` 为 `NaN`，然后应用规则 7。
 
-**Q：`[1] == [1]` 是 `true` 还是 `false`？**    
+---
+
+### Q：`[1] == [1]` 是 `true` 还是 `false`？**    
 A：`false`。    
 这里涉及到两个点：`==` 与 `===` 的区别 以及 JavaScript 的类型系统。     
 `==` 与 `===` 的区别在于 `===` 在执行比较运算前不会发生隐式的类型转换，而 `==` 运算发生的隐式类型转换遵循以下规则：
@@ -48,7 +52,9 @@ A：`false`。
 1. [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
 2. [ECMA-262 11.8 Relational Operators](http://www.ecma-international.org/ecma-262/5.1/#sec-11.8)
 
-**Q: JavaScript 中对象的引用传递是怎样的？**               
+---
+
+### Q: JavaScript 中对象的引用传递是怎样的？**               
 A: 首先题干有问题，JavaScript 中只有「传递引用」而没有「引用传递」。
 
 「引用传递」实际上是 C++ 中存在的概念：`&a = b` 相当于给变量 `b` 起了一个别名 `a`，「引用」与 「指针」最大的区别在于**一旦引用被初始化，就不能改变引用的关系**。
@@ -79,4 +85,7 @@ console.log(obj2.item); // unchanged
 **扩展**：
 1. [Is JavaScript a pass-by-reference or pass-by-value language?](http://stackoverflow.com/questions/518000/is-javascript-a-pass-by-reference-or-pass-by-value-language)
 2. [javascript传递参数如果是object的话，是按值传递还是按引用传递？](https://www.zhihu.com/question/27114726)
+
+---
+
 
