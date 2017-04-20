@@ -95,6 +95,7 @@ console.log(obj2.item); // unchanged
 A：在 Node.js 的一轮 Event-Loop 中，macrotask 只会执行现有的存在于 macrotask queue 中的任务，至于在此过程中新产生的 macrotask，会放在下一轮事件循环的 macrotask queue 中。而对于 microtask，在这一轮事件循环中新产生的 microtask，同样会被追加到这一轮 microtask queue 尾部，直到整个 microtask queue 被清空。
 
 对于 Node.js 的几个异步函数，`setTimeout`、`setImmediate` 和 `setInterval` 产生的是 macrotask，`process.nextTick` 产生的是 microtask。
+
 所以务必避免这样的代码：
 ```js
 function cb() {
