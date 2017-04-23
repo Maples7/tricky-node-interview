@@ -1,5 +1,5 @@
 # tricky-node-interview
-[Chinese Repo] A bunch of tricky questions I've met while preparing job interview of Node.js back-end developer.
+[Chinese Repo] A bunch of tricky questions I've met while preparing for job interview of Node.js back-end developer.
 
 ## 前言
 这个 Repo 记录我在准备 Node.js Web 后端开发面试过程中遇到的一些记得一提的问题。     
@@ -54,7 +54,7 @@ A：`false`。
 
 ---
 
-### Q: JavaScript 中对象的引用传递是怎样的？               
+### Q：JavaScript 中对象的引用传递是怎样的？               
 A: 首先题干有问题，JavaScript 中只有「传递引用」而没有「引用传递」。
 
 「引用传递」实际上是 C++ 中存在的概念：`&a = b` 相当于给变量 `b` 起了一个别名 `a`，「引用」与「指针」最大的区别在于**一旦引用被初始化，就不能改变引用的关系**。
