@@ -126,5 +126,6 @@ A：优点不言自明，生成的 lockfile 可以保证每次安装到的依赖
 **扩展**
 1. [An introduction to how JavaScript package managers work](https://medium.freecodecamp.com/javascript-package-managers-101-9afd926add0a)
 2. [使用 npm shrinkwrap 来管理项目依赖](http://tech.meituan.com/npm-shrinkwrap.html)
+3. [语义化版本 2.0.0](http://semver.org/lang/zh-CN/)
 
 ---
