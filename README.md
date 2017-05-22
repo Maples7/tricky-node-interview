@@ -110,6 +110,7 @@ bar();
 
 **扩展**：
 1. [Promise then中回调为什么是异步执行？](https://www.zhihu.com/question/57071244)
+2. [专栏: Promise只能进行异步操作？](https://wohugb.gitbooks.io/promise/content/usage/async.html)
 
 ---
 ---
