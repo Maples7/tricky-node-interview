@@ -87,6 +87,31 @@ console.log(obj2.item); // unchanged
 2. [javascript传递参数如果是object的话，是按值传递还是按引用传递？](https://www.zhihu.com/question/27114726)
 
 ---
+
+### Q：Promise.then() 的回调为什么一定是异步执行的 ？               
+A：因为异步回调才能避免代码执行顺序上的 Race Condition。
+考虑下面这一段代码：
+```js
+promise.then(function(){ 
+  if (trueOrFalse) { 
+    // 同步执行 
+    foo(); 
+  } else { 
+    // 异步执行 (如：使用第三方库)
+     setTimeout(function(){ 
+        foo(); 
+     }) 
+  } 
+}); 
+
+bar();
+```
+如果 .then() 的回调是同步执行的，那上段代码中的 `foo()` 与 `bar()` 的执行顺序取决于 `trueOrFalse` 这个变量的值（`true` 则 `foo()` 先执行，`false` 则 `bar()` 先执行），而如果 .then() 的回调是异步执行的话，`bar()` 一定会先执行，这样可以保证代码执行顺序上的一致性。
+
+**扩展**：
+1. [Promise then中回调为什么是异步执行？](https://www.zhihu.com/question/57071244)
+
+---
 ---
 
 ## Node.js
@@ -104,6 +129,8 @@ function cb() {
 cb();
 ```
 在 `process.nextTick` 的回掉中递归调用自己，这跟直接把线程阻塞无异。
+
+另外，由于 V8 的实现中 Promise 的异步回调产生的是 microtask，所以目前在 Node 中 Promise.then() 的回调会比 setTimeout() 的回调先执行。
 
 **扩展**：
 1. [Difference between microtask and macrotask within an event loop context](http://stackoverflow.com/questions/25915634/difference-between-microtask-and-macrotask-within-an-event-loop-context)
