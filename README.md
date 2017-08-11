@@ -51,6 +51,7 @@ A：`false`。
 **扩展**：
 1. [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
 2. [ECMA-262 11.8 Relational Operators](http://www.ecma-international.org/ecma-262/5.1/#sec-11.8)
+3. [JSFiddle for JS Comparison Table](http://jsfiddle.net/26Lf0a0L/)
 
 ---
 
